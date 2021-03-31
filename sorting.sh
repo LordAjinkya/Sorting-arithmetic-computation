@@ -1,4 +1,6 @@
+#!/bin/bash
 echo "Welcome to sorting Arithmetic computation program"
+declare -A result
 read -p "Enter first input " a
 read -p "Enter second input " b
 read -p "Enter third input " c
@@ -8,3 +10,5 @@ compute3="scale=2;$c + $a / $b"
 echo compute3="$compute3"
 compute4=`echo "scale=0;$a % $b + $c"
 echo compute4="$compute4"
+
+echo ${result[@]}
