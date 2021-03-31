@@ -12,3 +12,18 @@ compute4=`echo "scale=0;$a % $b + $c"
 echo compute4="$compute4"
 
 echo ${result[@]}
+compute1=echo "$a + $b * $c"
+compute2=echo "$a * $b + $c"
+result[1]="$compute1"
+result[2]="$compute2"
+result[3]="$compute3"
+result[4]="$compute4"
+
+
+echo "Dictionary :  ${result[@]}"
+echo "Array :"
+for i in ${!result[@]}
+do
+	arr[i]=${result[$i]}
+	echo -n "${arr[i]} "
+done
